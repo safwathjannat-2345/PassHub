@@ -159,11 +159,14 @@ int main() {
     printf("\n                ***** Help Us Evaluate Your Security *****          \n\n");
     do {
         printf("\n                    ----Enter Account Details----\n");
+        
         printf("\nEnter Account Name (e.g., Facebook): ");
         scanf(" %[^\n]", acc_name);
+        while(getchar() != '\n'); 
 
         printf("\nEnter Username / Email: ");
-        scanf("%s", username);
+        scanf(" %[^\n]", username);
+        while(getchar() != '\n'); 
 
         printf("\nEnter your Password: ");
         int i = 0;
@@ -187,6 +190,7 @@ int main() {
             }
         }
         printf("\n"); 
+        
 
         strcpy(input_passes[count], password);
         int category = analyze_password(password);
