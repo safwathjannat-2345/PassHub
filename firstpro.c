@@ -59,7 +59,8 @@ void generate_stored_passwords_page() {
     fprintf(html, "<title>PassHub — Vault & Credential Storage</title>\n");
     fprintf(html, "</head>\n<body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 30px;'>\n");
     
-    fprintf(html, "<div style='max-width: 700px; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>\n");
+    
+    fprintf(html, "<div style='max-width: 95%%; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>\n");
     fprintf(html, "<h2 style='color: #1a283e; text-align: center;'>PassHub — Secured Password Vault</h2>\n");
     fprintf(html, "<hr style='border: 0; border-top: 1px solid #ddd;'>\n");
     
@@ -101,7 +102,8 @@ void generate_main_dashboard(char accs[][50], char input_passes[][100], int inpu
     fprintf(html, "<title>PassHub — Security Dashboard</title>\n");
     fprintf(html, "</head>\n<body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 30px;'>\n");
     
-    fprintf(html, "<div style='max-width: 750px; margin: auto; background: #ffffff; padding: 35px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>\n");
+    
+    fprintf(html, "<div style='max-width: 95%%; margin: auto; background: #ffffff; padding: 35px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>\n");
     fprintf(html, "<h2 style='color: #1e293b; text-align: center; margin-bottom: 5px;'>PassHub — Your Auditor & Vault</h2>\n");
     fprintf(html, "<p style='text-align: center; color: #547aaf;'>Password Strength & Security Audit</p>\n");
     fprintf(html, "<hr style='border: 0; border-top: 1px solid #ddd; margin-bottom: 25px;'>\n");
@@ -158,7 +160,7 @@ int main() {
 
     printf("\n                ***** Help Us Evaluate Your Security *****          \n\n");
     do {
-        printf("\n                      ----Enter Account Details----\n");
+        printf("\n                    ----Enter Account Details----\n");
         printf("\nEnter Account Name (e.g., Facebook): ");
         scanf(" %[^\n]", acc_name);
 
