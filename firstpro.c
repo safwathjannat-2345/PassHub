@@ -59,7 +59,6 @@ void generate_stored_passwords_page() {
     fprintf(html, "<title>PassHub — Vault & Credential Storage</title>\n");
     fprintf(html, "</head>\n<body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 30px;'>\n");
     
-    
     fprintf(html, "<div style='max-width: 95%%; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>\n");
     fprintf(html, "<h2 style='color: #1a283e; text-align: center;'>PassHub — Secured Password Vault</h2>\n");
     fprintf(html, "<hr style='border: 0; border-top: 1px solid #ddd;'>\n");
@@ -101,7 +100,6 @@ void generate_main_dashboard(char accs[][50], char input_passes[][100], int inpu
     fprintf(html, "<!DOCTYPE html>\n<html>\n<head>\n");
     fprintf(html, "<title>PassHub — Security Dashboard</title>\n");
     fprintf(html, "</head>\n<body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 30px;'>\n");
-    
     
     fprintf(html, "<div style='max-width: 95%%; margin: auto; background: #ffffff; padding: 35px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>\n");
     fprintf(html, "<h2 style='color: #1e293b; text-align: center; margin-bottom: 5px;'>PassHub — Your Auditor & Vault</h2>\n");
@@ -167,7 +165,6 @@ int main() {
         printf("\nEnter Username / Email: ");
         scanf("%s", username);
 
-        
         printf("\nEnter your Password: ");
         int i = 0;
         char ch;
@@ -207,6 +204,7 @@ int main() {
             printf("Suggested Password: %s\n", suggested_pwd);
             printf("\n\nDo you want to accept this suggested password? (y/n): ");
             scanf(" %c", &choice_accept);
+            while(getchar() != '\n'); 
 
             if (choice_accept == 'y' || choice_accept == 'Y') {
                 strcpy(final_password, suggested_pwd);
@@ -219,6 +217,7 @@ int main() {
 
         printf("\nDo you want to save this password ? (y/n): ");
         scanf(" %c", &choice_save);
+        while(getchar() != '\n'); 
 
         if (choice_save == 'y' || choice_save == 'Y') {
             save_to_vault(acc_name, username, final_password);
@@ -234,6 +233,7 @@ int main() {
 
         printf("\nDo you want to add another account? (y/n): ");
         scanf(" %c", &add_more);
+        while(getchar() != '\n'); 
 
     } while (add_more == 'y' || add_more == 'Y');
 
